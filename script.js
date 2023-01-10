@@ -1,30 +1,27 @@
-$(document).ready(function(){
-    $("#submit").click(function(){
-        var username = document.getElementById("Username").value;
-        var password = document.getElementById("Password").value;
+localStorage.clear()
+for (let i = 1; i < 6; i++)
+{
+    let username = "Username" + i.toString()
+    let user = {
+    username: username,
+    password: "Password" + i.toString()
+    }
+    let json = JSON.stringify(user)
+    localStorage.setItem(username, json);
+}
 
 
+document.querySelector("#submit").addEventListener("click", function(){   
+    event.preventDefault();
+    var Username = document.getElementById("username").value;
+    var Password = document.getElementById("password").value;
 
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://interactivedev-30ef.restdb.io/rest/student",
-            "method": "GET",
-            "headers": {
-            "content-type": "application/json",
-            "x-apikey": "<your CORS apikey here>",
-            "cache-control": "no-cache"
-            }
-        }
-        
-        $.ajax(settings).done(function (response) {
-            console.log(response);
-        });
-
-        console.log(response);
+    var user = localStorage.getItem(Username)
+    var data = JSON.parse(user)
+    if(Username == data.username && Password == data.password){
+        document.querySelector("#form").setAttribute("action", "page2.html")
+    }
+   })
 
 
-
-
-    })
-})
+   
