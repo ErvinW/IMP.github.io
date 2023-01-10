@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width-device-width, inital-scale=1.0">
+        <meta name="viewport" content="width=device-width">
         <title>Login page</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
 
     <body>
         <div class="container">
             <div class="form-box">
                 <h1>Login</h1>
-                <form>
+                <form onsubmit="myfunction(event)">
                     <div class="input-group">
                         <div class="input-field">
-                            <input type="text" placeholder="Username">
+                            <input type="text" id="username" placeholder="Username">
                         </div>
 
                         <div class="input-field">
-                            <input type="password" placeholder="Password">
+                            <input type="password" id="password" placeholder="Password">
                         </div>
                         <div class="btn-field">
-                            <button type="button">Login</button>
+                            <button type="submit">Login</button>
                         </div>
 
                     </div>
