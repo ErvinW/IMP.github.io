@@ -47,7 +47,8 @@ document.querySelector("#submit").addEventListener("click", function(){
         
     }
     else{
-        console.log("Error incorrect password or username");
+        alert("Incorrect username or password");
+        return;
     }
    })
 
