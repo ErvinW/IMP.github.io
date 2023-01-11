@@ -14,6 +14,12 @@ localStorage.clear()
     constructor(username, password, name, studentclass,  module1, module2, module3, GPA){
         this.username = username
         this.password = password
+        this.name = name
+        this.class = studentclass
+        this.modone = module1
+        this.modtwo = module2
+        this.modthree = module3
+        this.GPA = GPA
     }
 }
 
@@ -49,12 +55,12 @@ document.querySelector("#submit").addEventListener("click", function(){
 
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
-
+    
     if (Username == "AdminKEVIN" && Password == "KEVINAdmin"){
         window.location.assign("adminpage.html");
     }
 
-    else if(Username == data.username && Password == data.password){    
+    else if(Username == data.username && Password == data.password){   
         window.location.assign("page2.html");                      
         
     }
@@ -71,3 +77,13 @@ document.querySelector("#submit").addEventListener("click", function(){
 
 
 
+ 
+
+  
+  
+
+
+
+
+
+  
