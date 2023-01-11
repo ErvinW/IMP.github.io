@@ -18,6 +18,8 @@ localStorage.clear()
 }
 
 
+
+
 let student1 = new Student("student1", "password1", "name1", "class1", 4.0, 4.0, 4.0,4.0);
 let json1 = JSON.stringify(student1)
 localStorage.setItem(student1.username,json1)
@@ -34,7 +36,10 @@ let student4 = new Student("student4", "password4", "name4", "class1", 4.0, 2.5,
 let json4 = JSON.stringify(student4)
 localStorage.setItem(student4.username,json4)
 
-
+//This chunk of code gets the username and password entered in by the user 
+//It then runs through every student object stored in the local storage
+//and checks if the info entered by the user matches to a student and
+//sends the user to a page containing that student's info. 
 document.querySelector("#submit").addEventListener("click", function(){   
     event.preventDefault();
     var Username = document.getElementById("username").value;
@@ -42,12 +47,20 @@ document.querySelector("#submit").addEventListener("click", function(){
 
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
-    if(Username == data.username && Password == data.password){
-        window.location.assign("page2.html");
+
+    if (Username == "AdminKEVIN" && Password == "KEVINAdmin"){
+        window.location.assign("adminpage.html");
+    }
+
+    else if(Username == data.username && Password == data.password){    
+        window.location.assign("page2.html");                      
         
     }
+    
+
+
     else{
-        alert("Incorrect username or password");
+        alert("Incorrect username or password");                    
         return;
     }
    })
