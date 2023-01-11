@@ -61,7 +61,8 @@ document.querySelector("#submit").addEventListener("click", function(){
     }
 
     else if(Username == data.username && Password == data.password){   
-        window.location.assign("page2.html");                      
+        window.location.assign("page2.html"); 
+        document.getElementById("Name").innerHTML = data.username;                     
         
     }
     
@@ -72,6 +73,10 @@ document.querySelector("#submit").addEventListener("click", function(){
         return;
     }
    })
+
+
+
+   
 
 
 
