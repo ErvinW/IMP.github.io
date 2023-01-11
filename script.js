@@ -36,6 +36,8 @@ let student4 = new Student("student4", "password4", "name4", "class1", 4.0, 2.5,
 let json4 = JSON.stringify(student4)
 localStorage.setItem(student4.username,json4)
 
+let senior1 = new Student("Senior1", "SenPW1", "SenName1", "SenClass1", 4, 4, 4, 4);
+
 //This chunk of code gets the username and password entered in by the user 
 //It then runs through every student object stored in the local storage
 //and checks if the info entered by the user matches to a student and
