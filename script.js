@@ -1,15 +1,4 @@
 localStorage.clear()
-// for (let i = 1; i < 6; i++)
-// {
-//     let username = "Username" + i.toString()
-//     let user = {
-//     username: username,
-//     password: "Password" + i.toString()
-//     }
-//     let json = JSON.stringify(user)
-//     localStorage.setItem(username, json);
-// }
-
    class Student{
     constructor(username, password, name, studentclass,  module1, module2, module3, GPA){
         this.username = username
@@ -43,14 +32,19 @@ let json4 = JSON.stringify(student4)
 localStorage.setItem(student4.username,json4)
 
 let senior1 = new Student("Senior1", "SenPW1", "SenName1", "SenClass1", 4, 4, 4, 4);
+let json5 = JSON.stringify(senior1)
+localStorage.setItem(senior1.username,json5)
 
 //This chunk of code gets the username and password entered in by the user 
 //It then runs through every student object stored in the local storage
 //and checks if the info entered by the user matches to a student and
 //sends the user to a page containing that student's info. 
+
 document.querySelector("#submit").addEventListener("click", function(){   
     event.preventDefault();
     var Username = document.getElementById("username").value;
+    let jsonuser = JSON.stringify(Username)
+    localStorage.setItem("Username", jsonuser)
     var Password = document.getElementById("password").value;
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
