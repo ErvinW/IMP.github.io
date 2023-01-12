@@ -43,8 +43,8 @@ localStorage.setItem(senior1.username,json5)
 document.querySelector("#submit").addEventListener("click", function(){   
     event.preventDefault();
     var Username = document.getElementById("username").value;
-    let jsonuser = JSON.stringify(Username)
-    localStorage.setItem("Username", jsonuser)
+    // let jsonuser = JSON.stringify(Username)
+    // localStorage.setItem("Username", jsonuser)
     var Password = document.getElementById("password").value;
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
@@ -54,7 +54,10 @@ document.querySelector("#submit").addEventListener("click", function(){
         window.location.assign("adminpage.html");
     }
 
-    else if(Username == data.username && Password == data.password){   
+    else if(Username == data.username && Password == data.password){ 
+        let InUser = new Student(data.username, data.password, data.name, data.studentclass, data.module1, data.module2, data.module3, data.GPA)
+        let jsonuser = JSON.stringify(InUser)
+        localStorage.setItem("Inuser", jsonuser)
         window.location.assign("page2.html"); 
         document.getElementById("Name").innerHTML = data.username;                  
         
