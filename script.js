@@ -52,9 +52,9 @@ document.querySelector("#submit").addEventListener("click", function(){
     event.preventDefault();
     var Username = document.getElementById("username").value;
     var Password = document.getElementById("password").value;
-
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
+    
     
     if (Username == "AdminKEVIN" && Password == "KEVINAdmin"){
         window.location.assign("adminpage.html");
@@ -62,7 +62,7 @@ document.querySelector("#submit").addEventListener("click", function(){
 
     else if(Username == data.username && Password == data.password){   
         window.location.assign("page2.html"); 
-        document.getElementById("Name").innerHTML = data.username;                     
+        document.getElementById("Name").innerHTML = data.username;                  
         
     }
     
@@ -73,6 +73,8 @@ document.querySelector("#submit").addEventListener("click", function(){
         return;
     }
    })
+
+   
 
 
 
