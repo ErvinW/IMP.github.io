@@ -32,8 +32,8 @@ let json4 = JSON.stringify(student4)
 localStorage.setItem(student4.username,json4)
 
 let senior1 = new Student("Senior1", "SenPW1", "SenName1", "SenClass1", 4, 4, 4, 4);
-let json5 = JSON.stringify(senior1)
-localStorage.setItem(senior1.username,json5)
+let Sjson1 = JSON.stringify(senior1)
+localStorage.setItem(senior1.username,Sjson1)
 
 //This chunk of code gets the username and password entered in by the user 
 //It then runs through every student object stored in the local storage
@@ -45,6 +45,8 @@ document.querySelector("#submit").addEventListener("click", function(){
     var Username = document.getElementById("username").value;
     // let jsonuser = JSON.stringify(Username)
     // localStorage.setItem("Username", jsonuser)
+    let jsonuser = JSON.stringify(Username)
+    localStorage.setItem("Username",Username)
     var Password = document.getElementById("password").value;
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)
@@ -55,9 +57,9 @@ document.querySelector("#submit").addEventListener("click", function(){
     }
 
     else if(Username == data.username && Password == data.password){ 
-        let InUser = new Student(data.username, data.password, data.name, data.studentclass, data.module1, data.module2, data.module3, data.GPA)
-        let jsonuser = JSON.stringify(InUser)
-        localStorage.setItem("Inuser", jsonuser)
+        // let InUser = new Student(data.username, data.password, data.name, data.studentclass, data.module1, data.module2, data.module3, data.GPA)
+        // let jsonuser = JSON.stringify(InUser)
+        // localStorage.setItem("Inuser", jsonuser)
         window.location.assign("page2.html"); 
         document.getElementById("Name").innerHTML = data.username;                  
         
