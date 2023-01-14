@@ -7,6 +7,14 @@ Eluser = localStorage.getItem("Username");
 var user = localStorage.getItem(localStorage.key(Eluser))
 var data = JSON.parse(user)
 ElName.innerHTML = "Welcome, " + Eluser;
-ElClass.innerHTML = "Class: " + data.class
-ElID.innerHTML = "Student ID: " + data.password
+for (var i = 0; i < localStorage.length; i++){
+    var user = localStorage.getItem(localStorage.key(i))
+    var data = JSON.parse(user)
+    if (data.login == true){
+        break
+        
+    }
+}
+
+
 
