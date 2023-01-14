@@ -1,0 +1,13 @@
+.container{
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+    width: 320px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
