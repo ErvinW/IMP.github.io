@@ -10,7 +10,7 @@ const ElGPA = document.getElementById("GPA");
 Eluser = localStorage.getItem("Username");
 var user = localStorage.getItem(localStorage.key(Eluser))
 var data = JSON.parse(user)
-// ElName.innerHTML = "Welcome, " + Eluser;
+
 
 
 
@@ -31,7 +31,7 @@ ElID.innerHTML = "Student ID: " + data.username;
 ElM1.innerHTML = "Module 1: " + data.modone;
 ElM2.innerHTML = "Module 2: " + data.modtwo;
 ElM3.innerHTML = "Module 3: " + data.modthree;
-ElGPA.innerHTML = "Overall GPA: " + data.GPA
+ElGPA.innerHTML = "Overall GPA: " + data.GPA;
 
 
 
