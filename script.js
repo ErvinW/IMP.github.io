@@ -45,7 +45,6 @@ document.querySelector("#submit").addEventListener("click", function(){
     event.preventDefault();
     var Username = document.getElementById("username").value;
     let jsonuser = JSON.stringify(Username)
-    localStorage.setItem("Username",Username)
     var Password = document.getElementById("password").value;
     var user = localStorage.getItem(Username)
     var data = JSON.parse(user)

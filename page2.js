@@ -7,17 +7,13 @@ const ElM1 = document.getElementById("M1");
 const ElM2 = document.getElementById("M2");
 const ElM3 = document.getElementById("M3");
 const ElGPA = document.getElementById("GPA");
-Eluser = localStorage.getItem("Username");
-var user = localStorage.getItem(localStorage.key(Eluser))
-var data = JSON.parse(user)
-
-
 
 
 for (var i = 0; i < localStorage.length; i++){
     var user = localStorage.getItem(localStorage.key(i))
     var data = JSON.parse(user)
     if (data.login == true){
+        console.log(data)
        
 
         break
