@@ -1,0 +1,23 @@
+html{
+    font-family: 'Roboto Mono', monospace;
+    background-size: cover;
+    background-color: orange;
+}
+
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.student1{
+    margin: 200px;
+    background: white;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+             
