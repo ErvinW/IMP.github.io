@@ -51,7 +51,7 @@ document.querySelector("#submit").addEventListener("click", function(){
     
     
     if (Username == "AdminKEVIN" && Password == "KEVINAdmin"){
-        window.location.assign("adminpage.html");
+        
     }
 
     else if(Username == data.username && Password == data.password){ 

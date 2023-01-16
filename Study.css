@@ -25,4 +25,20 @@ html{
     text-align: center;
     font-size: xx-large;
 }
+
+.button{
+    margin: auto;
+    margin-top: 20px;
+    height: 100px;
+    width: 320px;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
              
